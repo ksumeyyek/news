@@ -1,0 +1,56 @@
+@media(max-width:970px) {
+    #main-nav .right {
+        display: none;
+    }
+
+    #main-nav .container {
+
+        grid-template-columns: auto auto;
+        align-items: center;
+    }
+
+    #main-articles .articles-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* header üstündeki yazının grid 2 den 1 e aldık */
+    #header .header-container {
+        grid-template-columns: 1fr;
+    }
+    
+    #article .page-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:700px) {
+
+
+    #main-nav .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #main-nav ul,
+    #main-nav .logo {
+        justify-self: center;
+    }
+
+    #main-articles .articles-container,
+    #main-footer .footer-container {
+        grid-template-columns: 1fr
+    }
+
+
+
+
+    #main-footer .footer-container>*:last-child {
+        grid-column: 1;
+    }
+
+    #main-footer .footer-container>* {
+        border-bottom: 1px dotted #444;
+        padding-bottom: 16px;
+    }
+
+}
